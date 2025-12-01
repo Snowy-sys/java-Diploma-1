@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BunTests {
 
-    public Bun bun;
+    private Bun bun;
 
     @BeforeEach
     @DisplayName("Создание конструктора")
