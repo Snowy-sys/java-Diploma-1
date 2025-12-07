@@ -1,15 +1,14 @@
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InOrder;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import praktikum.Bun;
 import praktikum.Burger;
 import praktikum.Ingredient;
 import praktikum.IngredientType;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -31,6 +30,7 @@ public class BurgerTests {
     List<Ingredient> ingredientsListMock;
 
     @Test
+    @DisplayName("Проверка сеттинга булочки с моками")
     void setsBunsField() {
         Burger burger = new Burger();
         burger.setBuns(bunMock);
@@ -39,6 +39,7 @@ public class BurgerTests {
     }
 
     @Test
+    @DisplayName("Проверка добавления нового ингредиента с моками")
     void addIngredientDelegatesToIngredientsList() {
         Burger burger = new Burger();
         burger.ingredients = ingredientsListMock;
@@ -50,6 +51,7 @@ public class BurgerTests {
     }
 
     @Test
+    @DisplayName("Проверка удаление ингредиента с моками")
     void removeIngredientDelegatesToIngredientsList() {
         Burger burger = new Burger();
         burger.ingredients = ingredientsListMock;
@@ -61,6 +63,7 @@ public class BurgerTests {
     }
 
     @Test
+    @DisplayName("Проверка перемещения интгредиента по индексу после удаления с моками")
     void moveIngredientRemovesThenAddsToNewIndex() {
         Burger burger = new Burger();
         burger.ingredients = ingredientsListMock;
@@ -76,6 +79,7 @@ public class BurgerTests {
     }
 
     @Test
+    @DisplayName("Проверка получения цены бургера со стабами")
     void getPriceCalculatesBunDoublePlusIngredientsSum() {
         Burger burger = new Burger();
         burger.setBuns(bunMock);
@@ -92,6 +96,7 @@ public class BurgerTests {
     }
 
     @Test
+    @DisplayName("Проверка получения рецепта со стабами")
     void getReceiptBuildsCorrectReceiptString() {
         Burger burger = new Burger();
         burger.setBuns(bunMock);
