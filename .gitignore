@@ -4,7 +4,7 @@ target
 .build
 
 /shelf/
-/workspace.xml
+/.idea/workspace.xml
 
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
